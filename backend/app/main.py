@@ -16,7 +16,7 @@ models.Base.metadata.create_all(engine)
 app.mount('/images', StaticFiles(directory='images'), name='images')
 
 origins = [
-    'http://localhost:3000'
+    "*"
 ]
 
 app.add_middleware(CORSMiddleware,

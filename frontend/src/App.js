@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Post from './Post.js';
 import NewPost from './NewPost.js';
 
-const BASE_URL = 'http://localhost:8000/'
+const BASE_URL = '/'
 
 function App() {
 
@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     async function fetchPosts() {
       try {
-        const response = await fetch(BASE_URL + 'post'); 
+        const response = await fetch(BASE_URL + 'post/');
         const json = await response.json();
         console.log(json);
   

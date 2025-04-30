@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './NewPost.css'
 
-const BASE_URL = 'http://localhost:8000/'
+const BASE_URL = '/'
 
 function NewPost() {
 
@@ -62,7 +62,7 @@ function NewPost() {
       body: json_string
     }
 
-    fetch(BASE_URL + 'post', requestOptions)
+    fetch(BASE_URL + 'post/', requestOptions)
       .then(response => {
         if (response.ok) {
           return response.json()

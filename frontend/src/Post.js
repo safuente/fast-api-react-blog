@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import './Post.css';
 
-const BASE_URL = 'http://localhost:8000/'
+const BASE_URL = '/'
 
 function Post({post}) {
 
@@ -18,7 +18,7 @@ function Post({post}) {
             method: 'DELETE'
         }
 
-        fetch(BASE_URL + 'post/' + post.id, requestOptions)
+        fetch(BASE_URL + 'post/' + post.id , requestOptions)
         .then(response => {
             if (response.ok) {
                 window.location.reload()
